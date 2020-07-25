@@ -1,0 +1,534 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    font-family: Roboto,
+                 Arial,
+                 sans-serif;
+    letter-spacing: 0;
+    background-color: #e9e9e9;
+}
+/*--flipkart header block css starts here--*/
+
+#headerBlock {
+    position: relative; /*fixed*/
+    background-color: #2874f0;
+    width: 100%; /*why %- based on computer resolution*/
+    height: 56px;
+    top: 0;
+}
+
+#headerBlock article {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 56px; /*top-center*/
+    align-items: center;
+    justify-content: center;
+}
+
+/*#headerBlock article div {
+    flex: 1;
+}*/
+
+/*--left-right header css--*/
+#headerBlock article .leftHeader {
+    flex-basis: 65%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto
+}
+#headerBlock article .rightHeader {
+    flex-basis: 30%;
+}
+
+/*inside left header three div are logo,plus& search css*/
+.logo {
+    flex-basis: 14%;
+}
+.search {
+    flex-basis: 110%;
+}
+
+.main_logo_block img {
+    width: 74px;
+}
+
+
+.plus_logo_block span {
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -1px;
+}
+/*3divs css*/
+.explore {
+    color: #f0f0f0;
+}
+.plus {
+    color: #ffe500;
+    font-weight: 500;
+    margin-right: 2px;
+}
+.plus_logo img {
+    width: 9px;
+}
+.logo a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    /*margin-top: -10px;*/
+    line-height: 10px;
+    color: #fff;
+}
+
+.plus_logo_block:hover {
+    text-decoration: underline;
+}
+
+/*---search css starts here----*/
+.search input {
+    width: 81%;
+    box-sizing: border-box;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    /*padding: 0px 10px;
+    text-transform: capitalize;*/
+    border: 0; /*search border*/
+    outline: 0 none;
+}
+
+/*how can be call placeholder text css*/
+/*input[placeholder=""] OR*/
+/*psuedo selector use always */
+::placeholder {
+    padding-left: 15px; /*text*/
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+    padding: 0px 16px;
+    
+}
+.search-icon-block {
+    position: relative;
+}
+.fa-search {
+    position: absolute;
+    left: -35px;
+    font-size: 111%;
+    top: 2px;
+    color: #2874f0;
+}
+/*sir-->position: absolute;
+    left: -31px;
+    font-size: 17px;
+    top: 3px;
+    color: #2874f0;*/
+/*----search css ends here----*/
+
+/*--------right menu css starts here---------*/
+/*removes bullets,underline, */
+/*-->-- immediate selector big role --all li shift to orderwise*/
+.rightHeader nav > ul{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: -25px;
+        font-weight: 600;
+        font-size: 15px;
+}
+
+.rightHeader nav > ul > li > a {
+    padding: 0 27px 0 34px; /**/
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+/*login css--psuedo selector*/
+/*a.first-child--important role*/
+.rightHeader nav ul > li:nth-child(1) a.first-child {
+    background-color: #fff;
+    color: #2874f0;
+    padding: 6px 40px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px 0px #11111140;
+}
+/*more icon*/
+.chevron-down {
+    font-size: 8px;
+    position: relative;
+    margin-right: -5px;
+    margin: 0px 0px 0 3px;
+    top: -2px;
+}
+/*cart icon*/
+.fa-shopping-cart {
+    margin: 0px 4px 0 -10px;
+
+}
+/*--flipkart dropdown menu css starts here--*/
+.first-child {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    display: none; /*display flex to display none-- hover  effect*/
+    flex-direction: column; /*vertically we needed*/
+    list-style: none;
+    /*background-color: #fff;*/
+    width: 260px;
+    /*box-shadow: 1px 0px 6px 0px #ccc;*/
+    /*padding: 0px 20px;*/
+    margin: 7px 0;
+    left: 992px;
+    /*height: 300px;*/
+}
+.dropdown .nav-item .nav-link {
+    padding: 10px 20px !important;
+}
+/*.dropdownMenu {
+    padding: 12px 0; 
+}*/
+.dropdown a {
+    text-decoration: none;
+    color: #444;
+    /*border-bottom: 1px solid #eee;*/
+    display: block;
+    width: 100%;
+    padding: 15px 11px; /**/
+    transition: all .5s ease;
+    font-weight: lighter;
+}
+.customer_links {
+    display: flex;
+}
+
+/*signup rightside*/
+.customer_links span {
+    flex: 1;
+    
+}
+
+
+
+/*.customer_links span a:nth-child(1) {
+    color: #111;
+}
+.customer_links span a:nth-child(2) {
+    color: #2874f0;
+}*/
+
+/*editing top to center*/
+.customer_links span a.customer {
+    color: #111;
+    position: relative;
+    top: 8px;
+    right: -10px;
+    font-weight: bold;
+}
+/*editing signup top to center*/
+.customer_links span a.signup {
+    color: #2874f0;
+    text-align:right ;
+    font-weight: bold;
+    position: relative;
+    top: 8px;
+    right: -10px
+}
+
+/*hover effect*/
+ul > li:hover ul {
+    display: flex;
+}
+
+.dropdown li {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    /*box-shadow: 1px 0px 6px 0px #ccc;*/
+}
+/*how to make it triangle in dropdown*/
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    position: relative;
+    margin: auto;
+}
+/*login z index*/
+.nav-item {
+    z-index: 9999;
+}
+/*My customer,signup css*/
+.customer {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+.signup {
+    margin-left: -20px;
+    display: block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: #2874f0;
+}
+/*My Profile css*/
+.user-circle {
+    margin-right: 10px;
+    color: #2874f0;
+    /*display: flex;
+    float: left;
+    margin: 17px 12px;
+    color: #2874f0;*/
+}
+.fa-user-circle {
+    padding: 0px 0px 0px 15px;
+}
+/*flipkartplusZone*/
+.dropdownMenu span i {
+    color: #2874f0;
+}
+.plusZoneicon img {
+    position: relative;
+    top: 17px;
+    right: -26px;
+    width: 15px;
+    filter: invert(1);/**/
+}
+.plus-zone {
+    position: relative;
+    top: -18px;
+    right: -43px;
+    
+}
+/*.dropdownMenu {
+    display: flex;
+    align-items: center;
+}*/
+/*.dropdownMenu span {
+    margin: 0px 15px;
+}*/
+/*CONCEPT2--how to make it triangle-- simple box model--*
+#triangle {
+    width: 76px;
+    /*height: 58px;
+    background-color: turquoise;*
+    clear: both;
+    margin: 80px;
+    position: absolute;
+    /*margin: 100px 34px;
+    padding: 10px;
+    color: #fff;*
+    border-right: 74px solid transparent;
+    border-left: 73px solid transparent;
+    border-bottom: 52px solid #03A9F4;
+    text-indent: -9999px;
+}*/
+/*-CONCEPT1--how to make it triangle--
+.triangle {
+    height: 0;
+    width: 0;
+    position: relative;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 15px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}*/
+/*ul li:hover > ul {
+    display: block; /*where ul is it display*
+    position: absolute;
+}
+nav ul li a:hover {
+    transition: ease all 0.6s; /*little bit animation*
+}*/
+
+/*--flipkart dropdown menu css ends here--*/
+/*--------right menu css ends here---------*/
+/*--flipkart header block css ends here--*/
+
+/*--Main menu block stars here--*/
+/*border*/ 
+#mainMenuBlock {
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+/*move to flex start to center*/
+#mainMenuBlock article {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*text part*/
+#mainMenuBlock ul {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+#mainMenuBlock ul li {
+    flex: 1 auto;/**/
+}
+#mainMenuBlock ul li a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+    font-size: 14px;
+}
+/*blue effect*/
+#mainMenuBlock ul li a:hover {
+    color: #2874f0;
+}
+/*down icon*/
+.chevron-down {
+    fill: #878787 !important;
+    opacity: .5;
+    
+}
+/*--dropdown mega menu css starts here--*/
+#MegaDropDownMenuBlock {
+    /*display: flex;
+    background: #fff;
+    height: 65vh;
+    width: 1200px;
+    position: absolute;
+    box-shadow: 1px 1px 4px 1px #ccc;*/
+    display: flex;
+    background: #fff;
+    height: 75%;
+    width: 1215px;
+    position: absolute;
+    box-shadow: 0px 2px 3px 0px #ccc;
+    justify-content: space-between;
+    left: 135px;
+    font-size: 13px;
+    z-index: 10;
+    padding: 10px;
+    margin: 10px 0px; 
+    display: none;
+    z-index: 9999;
+    /* padding: 0px 0px 0px 0px; */
+    /*bottom: -12px;*/
+}
+#MegaDropDownMenuBlock div {
+    flex-basis: 25%; /*flex orientation thing or flex width*/
+    padding: 20px;
+    
+}
+#MegaDropDownMenuBlock div:nth-child(odd) {
+    background: #fff;
+}
+#MegaDropDownMenuBlock div:nth-child(even) {
+    background: #f3f4f5; /*fdfbfb*/
+}
+._1KCOnI_3ZgIXy {
+    color: #666;
+}
+
+.megaMenuDiv ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    line-height: 26px;
+}
+.megaMenuDiv ul li a {
+    font-size: 13px !important;
+    color: #212121 !important;
+    font-weight: 400 !important;
+    padding: 12px 0;
+}
+.mobile {
+    font-weight: bold !important;
+    
+}
+#mainMenuBlock ul > li:hover #MegaDropDownMenuBlock {
+    display: flex;
+}
+#mainMenuBlock ul li:hover .fa-chevron-down {
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg);
+}
+
+#mainMenuBlock ul li:hover .fa-chevron-down {
+    fill: #2874f0 !important;
+}
+/*--dropdown mega menu ends here--*/
+
+/*--Main menu block stars here--*/
+
+/*---deals of the day block starts here---*/
+#dealsBlock {
+    margin: 8px;
+    height: 350px;
+    height: 350px;
+}
+
+#dealsBlock article {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.dealsLeftBlock {
+    flex-basis: 79%;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    background-color: #fff;
+}
+
+.dealsRightBlock {
+    flex-basis: 19%;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    background-color: #fff;
+
+} 
+span.RightImage img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 354px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*mobile css
+#barsBlock {
+    display: none;
+}*/
+
+/*---deals of the day block starts here---*/
+
+
+
+
+
+
+
+
+
+
+
+
